@@ -27,7 +27,7 @@ else:
 print(remote_ip)
 
 
-Parallel(n_jobs=20, backend='threading')(delayed(get_ports)(port) for port in range(1, 1000))
+Parallel(n_jobs=20, backend='threading')(delayed(get_ports)(port) for port in range(1, 65535))
 
 print(f"Open ports : {open_ports}")
 
